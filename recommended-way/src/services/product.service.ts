@@ -23,7 +23,7 @@ export class ProductService {
     // creating a new product
     const newProduct = new Product(id, cleanedName, price);
 
-    // saving the new product on database. Doesn't metter what is
+    // saving the new product to the database
     this.productRepository.createProduct(newProduct);
 
     // // creating mysql query
