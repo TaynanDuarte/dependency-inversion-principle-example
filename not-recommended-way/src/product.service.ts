@@ -1,5 +1,4 @@
 import { FakeMySqlLib } from "./fakeMySqlLib";
-import { Product } from "./product";
 
 export class ProductService {
   private readonly mysqlLib = new FakeMySqlLib();
@@ -24,7 +23,7 @@ export class ProductService {
     VALUES (${id}, ${cleanedName}, ${price}); 
     `;
 
-    // saving the new peoduct on mysql database
+    // saving the new product to the mysql database
     await this.mysqlLib.query(sql);
   }
 }
